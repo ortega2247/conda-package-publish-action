@@ -24,10 +24,8 @@ check_if_meta_yaml_file_exists() {
 }
 
 upload_package(){
-    conda config --set anaconda_upload yes
-    anaconda login --username $INPUT_ANACONDAUSERNAME --password $INPUT_ANACONDAPASSWORD
-    conda build .
-    anaconda logout
+    conda build . --output-folder .
+    anaconda -t $INPUT_CONDA_UPLOAD_TOKEN upload ./noarch/*.tar.bz2
 }
 
 go_to_build_dir
