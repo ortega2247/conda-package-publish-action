@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: publish-to-conda
-      uses: m0nhawk/conda-package-publish-action@master
+      uses: ortega2247/conda-package-publish-action@master
       with:
         subDir: '.'
         AnacondaToken: ${{ secrets.ANACONDA_TOKEN }}
