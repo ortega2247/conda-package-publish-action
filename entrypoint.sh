@@ -25,7 +25,7 @@ check_if_meta_yaml_file_exists() {
 
 upload_package(){
     conda build . --output-folder .
-    anaconda -t $INPUT_CONDA_UPLOAD_TOKEN upload ./noarch/*.tar.bz2
+    anaconda -t $INPUT_ANACONDATOKEN upload ./noarch/*.tar.bz2
 }
 
 go_to_build_dir
