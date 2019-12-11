@@ -16,6 +16,5 @@ jobs:
       uses: m0nhawk/conda-package-publish-action@master
       with:
         subDir: '.'
-        AnacondaUsername: ${{ secrets.ANACONDA_PASSWORD }}
-        AnacondaPassword: ${{ secrets.ANACONDA_USERNAME }}
+        AnacondaToken: ${{ secrets.ANACONDA_TOKEN }}
 ```
